@@ -47,3 +47,45 @@ Finally, the UI renders:
 
 ## ✨ Design Philosophy
 The UI uses **Glassmorphism** (frosted glass effects) and a **Marine Dark Theme**. This isn't just for looks; it's designed to reduce eye strain (important for long-watch shifts) and highlight critical safety warnings (red/yellow badges) clearly against the deep blue background.
+Listed directory marine_project
+Viewed requirements.txt:1-12
+Viewed ship%20%281%29.py:1-100
+Edited project_overview.md
+
+Certainly! Here is a clear explanation of your **Marine Route Optimizer** project, the libraries involved, and how it all works together.
+
+### ⚓ Project Summary
+The **Marine Route Optimizer** is a professional-grade maritime decision support tool. It helps ship operators plan the most efficient paths between global ports while accounting for real-time weather, vessel fuel consumption, and safety risks.
+
+---
+
+### 📚 Key Libraries & Why They Are Used
+
+| Library | Purpose | Why it's essential |
+| :--- | :--- | :--- |
+| **Streamlit** | Web Interface | It turns Python scripts into a beautiful, interactive web app without needing HTML/CSS knowledge. |
+| **Searoute** | Maritime Routing | **The most important part.** Unlike Google Maps (which shows roads), this library uses a database of real international sea lanes to find the shortest path over water. |
+| **Folium** | Interactive Maps | It renders the "Route Map" tab, allowing you to zoom in on sea paths and see exact port locations. |
+| **Geopy** | Port Search | It converts city names like "Singapore" or "Chennai" into precise latitude and longitude coordinates. |
+| **Scikit-Learn**| Machine Learning | Powers the **Hazard Prediction** model. It uses a "Random Forest" algorithm to predict if a route is "High" or "Low" risk based on weather. |
+| **Plotly** | Visualization | Used to create the premium "Fuel Analysis" gauges and the "Weather Radar" charts. |
+| **Groq / AI** | Intelligent Analysis | Acting as an AI consultant, it looks at all the data and writes a professional safety summary and recommendations. |
+| **OpenWeather** | Live Weather | Fetches real-time wind speed, visibility, and pressure data for your specific departure point. |
+
+---
+
+### ⚙️ How It Works (The Process)
+
+1.  **Search & Location**: When you enter a start and end location, the app uses **Geopy** to find their geographic coordinates. 
+2.  **Pathfinding**: These coordinates are sent to **Searoute**, which maps out a path that sticks strictly to global shipping lanes, avoiding land and shallow waters.
+3.  **Data Analysis**:
+    *   **Fuel**: The app calculates how much fuel you'll burn based on your vessel's weight and speed.
+    *   **Weather**: It fetches current conditions from the **OpenWeather API**.
+    *   **ML Prediction**: The **Scikit-Learn** model analyzes that weather data to predict potential voyage delays (in hours) and a hazard level.
+4.  **Premium UI Rendering**: All this data is presented on a high-end "Glassmorphism" interface (using the custom CSS). The maps, charts, and AI reports are organized into tabs for easy reading.
+
+### 🌓 State Management (The Fix We Just Added)
+The most important technical feature we just refined is **State Persistence** using `st.session_state`. This ensures that even if you press "Enter" or change a value in the "Multi-Stop" area, your map and optimization results **don't disappear** or reset the app to the welcome screen.
+
+I've also created a more detailed technical document for you here:
+[Project Overview](file:///C:/Users/HARIPRAKASH/.gemini/antigravity/brain/d3af350f-a0b2-4a88-b7d1-b95a03f14ce2/project_overview.md)
