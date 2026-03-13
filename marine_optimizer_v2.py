@@ -66,6 +66,146 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Custom CSS for Premium UI
+st.markdown("""
+<style>
+    /* Main background and fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    
+    html, body, [data-testid="stAppViewContainer"] {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0c4a6e 100%) !important;
+        background-attachment: fixed !important;
+    }
+    
+    /* Center container glassmorphism */
+    [data-testid="stHeader"] {
+        background: rgba(15, 23, 42, 0.8) !important;
+        backdrop-filter: blur(10px);
+    }
+    
+    .block-container {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 3rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Premium Header Gradient */
+    .main-header {
+        background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
+        padding: 2.5rem;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-header h1 {
+        font-size: 3rem !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.05em !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Styled Metrics Containers */
+    div[data-testid="stMetric"] {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    div[data-testid="stMetric"]:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-5px);
+    }
+    
+    [data-testid="stMetricValue"] {
+        font-size: 2.2rem !important;
+        font-weight: 700 !important;
+        color: #60a5fa !important;
+    }
+    
+    [data-testid="stMetricLabel"] {
+        font-weight: 600 !important;
+        color: #94a3b8 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    /* Styled Tabs */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 12px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 10px !important;
+        padding: 0 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        color: #94a3b8 !important;
+        transition: all 0.2s ease;
+    }
+
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+    }
+
+    .stTabs [aria-selected="true"] {
+        background-color: #3b82f6 !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    }
+    
+    /* Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: rgba(15, 23, 42, 0.95);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-header {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #3b82f6;
+        margin: 2rem 0;
+        text-align: center;
+        letter-spacing: -0.02em;
+    }
+    
+    /* Custom buttons */
+    .stButton>button {
+        width: 100%;
+        border-radius: 12px;
+        height: 3.5rem;
+        background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        font-weight: 700;
+        border: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .stButton>button:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.5);
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Load API keys securely. Fallback to placeholder if secrets.toml is missing.
 try:
     WEATHER_API_KEY = st.secrets["WEATHER_API_KEY"]
@@ -652,11 +792,8 @@ class MultiStopOptimizer:
 
 
 def main():
-    st.title("🚢 Marine Route Optimizer V2")
-    st.markdown("""
-    This application helps optimize maritime routes based on vessel specifications, 
-    weather conditions, and ant colony optimization algorithms.
-    """)
+    # Hero Section
+    st.markdown('<div class="main-header"><h1>🚢 Marine Route Optimizer V2</h1><p>Next-Generation Maritime Intelligence & Multi-Stop Voyage Optimizer</p></div>', unsafe_allow_html=True)
     
     # Initialize session state for persistence
     if 'optimized' not in st.session_state:
@@ -665,7 +802,7 @@ def main():
         st.session_state.multi_optimized = False
     
     # Sidebar for inputs
-    st.sidebar.header("Navigation Parameters")
+    st.sidebar.markdown('<div class="sidebar-header">📍 Navigation</div>', unsafe_allow_html=True)
     
     # Locations
     start_location = st.sidebar.text_input("Start Location", "San Francisco")
@@ -830,14 +967,15 @@ def main():
             fi_df = pd.DataFrame(list(pred["feature_importance"].items()), columns=["Feature", "Importance"])
             st.plotly_chart(px.bar(fi_df, x="Importance", y="Feature", orientation="h"))
         
-        # Tab 6: Multi-Stop (The fix is here - use session state to persist results)
+        # Tab 6: Multi-Stop
         with tab6:
             st.header("🚢 Multi-Stop Voyage Optimizer")
             ports_input = st.text_area(
                 "Ports (one per line — first = origin, last = destination):",
-                value=f"{start_location}\n{end_location}", height=150
+                value=f"{start_location}\n{end_location}", height=150,
+                key="ms_input_v2"
             )
-            multi_btn = st.button("⚙️ Optimize Multi-Stop Route", key="ms_btn")
+            multi_btn = st.button("⚙️ Optimize Multi-Stop Route", key="ms_btn_v2")
             
             if multi_btn:
                 port_list = [p.strip() for p in ports_input.splitlines() if p.strip()]

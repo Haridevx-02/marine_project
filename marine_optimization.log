@@ -140,3 +140,38 @@
 2026-03-13 10:59:20,621 - INFO - Successfully geocoded location: los angeles
 2026-03-13 10:59:21,489 - INFO - Successfully fetched weather data for Park Town
 2026-03-13 10:59:21,496 - INFO - ACO converged after 3 iterations
+2026-03-13 13:51:39,513 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 13:51:40,412 - INFO - Successfully geocoded location: san francisco
+2026-03-13 13:51:40,412 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 13:51:40,777 - INFO - Successfully geocoded location: los angeles
+2026-03-13 13:51:41,614 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 13:51:41,623 - INFO - ACO converged after 4 iterations
+2026-03-13 13:55:48,339 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 13:55:48,536 - INFO - Successfully geocoded location: san francisco
+2026-03-13 13:55:48,537 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 13:55:48,549 - INFO - Successfully geocoded location: los angeles
+2026-03-13 13:55:49,606 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 13:55:49,615 - INFO - ACO converged after 4 iterations
+2026-03-13 13:56:40,134 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 13:56:41,723 - INFO - Successfully geocoded location: san francisco
+2026-03-13 13:56:41,724 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 13:56:41,731 - INFO - Successfully geocoded location: los angeles
+2026-03-13 13:56:42,570 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 13:56:42,588 - INFO - ACO converged after 5 iterations
+2026-03-13 14:05:10,629 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:05:10,791 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:05:10,791 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:05:10,909 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:05:12,023 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:05:12,036 - INFO - ACO converged after 3 iterations
+2026-03-13 14:05:23,647 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:05:28,662 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<HTTPSConnection(host='nominatim.openstreetmap.org', port=443) at 0x1ed9f24e5d0>, 'Connection to nominatim.openstreetmap.org timed out. (connect timeout=5)')': /search?q=san+francisco&format=json&limit=1
+2026-03-13 14:05:29,603 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:05:29,604 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:05:29,676 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:06:12,559 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-13 14:06:13,976 - INFO - Successfully geocoded location: chennai
+2026-03-13 14:06:13,976 - INFO - Attempting to geocode location: japan (attempt 1)
+2026-03-13 14:06:14,621 - INFO - Successfully geocoded location: japan
+2026-03-13 14:06:14,621 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:06:14,633 - INFO - Successfully geocoded location: los angeles

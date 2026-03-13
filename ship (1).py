@@ -65,6 +65,146 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Custom CSS for Premium UI
+st.markdown("""
+<style>
+    /* Main background and fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    
+    html, body, [data-testid="stAppViewContainer"] {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0c4a6e 100%) !important;
+        background-attachment: fixed !important;
+    }
+    
+    /* Center container glassmorphism */
+    [data-testid="stHeader"] {
+        background: rgba(15, 23, 42, 0.8) !important;
+        backdrop-filter: blur(10px);
+    }
+    
+    .block-container {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 3rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Premium Header Gradient */
+    .main-header {
+        background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
+        padding: 2.5rem;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-header h1 {
+        font-size: 3rem !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.05em !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Styled Metrics Containers */
+    div[data-testid="stMetric"] {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    div[data-testid="stMetric"]:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-5px);
+    }
+    
+    [data-testid="stMetricValue"] {
+        font-size: 2.2rem !important;
+        font-weight: 700 !important;
+        color: #60a5fa !important;
+    }
+    
+    [data-testid="stMetricLabel"] {
+        font-weight: 600 !important;
+        color: #94a3b8 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    /* Styled Tabs */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 12px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 10px !important;
+        padding: 0 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        color: #94a3b8 !important;
+        transition: all 0.2s ease;
+    }
+
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+    }
+
+    .stTabs [aria-selected="true"] {
+        background-color: #3b82f6 !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    }
+    
+    /* Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: rgba(15, 23, 42, 0.95);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-header {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #3b82f6;
+        margin: 2rem 0;
+        text-align: center;
+        letter-spacing: -0.02em;
+    }
+    
+    /* Custom buttons */
+    .stButton>button {
+        width: 100%;
+        border-radius: 12px;
+        height: 3.5rem;
+        background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        font-weight: 700;
+        border: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .stButton>button:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.5);
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Load API keys securely. Fallback to placeholder if secrets.toml is missing.
 try:
     WEATHER_API_KEY = st.secrets["WEATHER_API_KEY"]
@@ -288,7 +428,8 @@ class MarineWeatherAnalyzer:
             - End: {route[-1]}
             - Total Distance: {optimized_distance} nautical miles
             
-            ## Vessel Details
+            ## Vessel
+
             - Ship Type: {ship.ship_type}
             - Max Speed: {ship.max_speed} knots
             - Fuel Capacity: {ship.fuel_capacity} liters/tons
@@ -651,14 +792,11 @@ class MultiStopOptimizer:
 
 
 def main():
-    st.title("🚢 Marine Route Optimizer")
-    st.markdown("""
-    This application helps optimize maritime routes based on vessel specifications, 
-    weather conditions, and ant colony optimization algorithms.
-    """)
+    # Hero Section
+    st.markdown('<div class="main-header"><h1>🚢 Marine Route Optimizer</h1><p>Next-Generation Maritime Intelligence & Route Optimization</p></div>', unsafe_allow_html=True)
     
     # Sidebar for inputs
-    st.sidebar.header("Navigation Parameters")
+    st.sidebar.markdown('<div class="sidebar-header">📍 Navigation</div>', unsafe_allow_html=True)
     
     # Locations
     start_location = st.sidebar.text_input("Start Location", "San Francisco")
@@ -691,6 +829,14 @@ def main():
         num_ants = 10
         max_iterations = 100
         
+    # Initialize session state for persistence
+    if 'optimized' not in st.session_state:
+        st.session_state.optimized = False
+    if 'multi_optimized' not in st.session_state:
+        st.session_state.multi_optimized = False
+    if 'ms_result' not in st.session_state:
+        st.session_state.ms_result = None
+
     # Create ship object
     ship = Ship(
         ship_type=ship_type,
@@ -707,6 +853,7 @@ def main():
     # Initialize analyzer
     analyzer = MarineWeatherAnalyzer()
     
+    # If button clicked, store in session state
     if optimize_button:
         with st.spinner("Optimizing your maritime route..."):
             try:
@@ -716,264 +863,275 @@ def main():
                 
                 if not start_coords or not end_coords:
                     st.error("Error: Could not find coordinates for the specified locations. Please check the location names.")
+                    st.session_state.optimized = False
                 else:
                     # Successfully found coordinates
-                    st.success(f"Found coordinates for locations")
-                    
-                    # Create tabs (includes 2 new feature tabs)
-                    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-                        "🗺️ Route Map", "🌤️ Weather Data",
-                        "📋 Route Analysis", "⛽ Fuel Analysis",
-                        "🤖 ML Hazard Prediction", "🚢 Multi-Stop Voyage"
-                    ])
+                    st.session_state.start_coords = start_coords
+                    st.session_state.end_coords = end_coords
                     
                     # Fetch weather data
-                    weather_data = analyzer.fetch_weather_data(start_coords[0], start_coords[1])
+                    st.session_state.weather_data = analyzer.fetch_weather_data(start_coords[0], start_coords[1])
                     
-                    if not weather_data:
-                        st.error("Error: Could not fetch weather data. Please check your internet connection.")
+                    if not st.session_state.weather_data:
+                        st.error("Error: Could not fetch weather data.")
+                        st.session_state.optimized = False
                     else:
-                        # Create a simple distance-based graph (in a real application, this would be based on actual maritime data)
-                        graph = np.array([
-                            [0, 1, 2, 0],
-                            [1, 0, 3, 4],
-                            [2, 3, 0, 5],
-                            [0, 4, 5, 0]
-                        ])
+                        # Success
+                        st.session_state.optimized = True
                         
-                        # Run optimization algorithm
+                        # Graph and ACO
+                        graph = np.array([[0, 1, 2, 0], [1, 0, 3, 4], [2, 3, 0, 5], [0, 4, 5, 0]])
                         optimized_route, cost = analyzer.ant_colony_optimization(
-                            graph, start=0, end=3, ship=ship, weather_data=weather_data,
+                            graph, start=0, end=3, ship=ship, weather_data=st.session_state.weather_data,
                             num_ants=num_ants, max_iterations=max_iterations
                         )
-                        
-                        # Calculate distance
-                        distance = analyzer.haversine_distance(start_coords, end_coords) * 0.539957  # Convert to nautical miles
-                        
-                        # Calculate ETA
-                        eta_hours = analyzer.calculate_eta(start_coords, end_coords, ship)
-                        
-                        # Calculate fuel consumption
-                        fuel_consumption_estimate = analyzer.calculate_fuel_consumption(distance, ship)
-                        remaining_fuel = ship.fuel_capacity - fuel_consumption_estimate
-                        
-                        # Tab 1: Map
-                        with tab1:
-                            st.header("Maritime Route Map")
-                            m = analyzer.create_map(start_coords, end_coords)
-                            folium_static(m)
-                            
-                            # Summary stats
-                            col1, col2, col3 = st.columns(3)
-                            col1.metric("Distance", f"{distance:.1f} nautical miles")
-                            col2.metric("ETA", f"{eta_hours:.1f} hours")
-                            col3.metric("Fuel Used", f"{fuel_consumption_estimate:.1f} liters/tons")
-                        
-                        # Tab 2: Weather data
-                        with tab2:
-                            st.header(f"Weather Conditions at {weather_data.location}")
-                            
-                            # Display weather data in columns
-                            col1, col2, col3 = st.columns(3)
-                            col1.metric("Temperature", f"{weather_data.temperature:.1f}°C")
-                            col2.metric("Wind Speed", f"{weather_data.wind_speed:.1f} m/s")
-                            col3.metric("Visibility", f"{weather_data.visibility:.1f} km")
-                            
-                            col1, col2 = st.columns(2)
-                            col1.metric("Humidity", f"{weather_data.humidity}%")
-                            col2.metric("Pressure", f"{weather_data.pressure} hPa")
-                            
-                            st.markdown(f"**Weather description:** {weather_data.description}")
-                            st.markdown(f"**Last updated:** {weather_data.timestamp}")
-                            
-                            # Weather radar chart
-                            st.plotly_chart(create_weather_radar_chart(weather_data))
-                            
-                            # Weather warning
-                            if weather_data.wind_speed > 10:
-                                st.warning("⚠️ High wind speeds detected! Exercise caution.")
-                            if weather_data.visibility < 5:
-                                st.warning("⚠️ Low visibility conditions! Exercise caution.")
-                        
-                        # Tab 3: Route analysis
-                        with tab3:
-                            st.header("Route Analysis and Recommendations")
-                            route_summary = analyzer.generate_route_summary(optimized_route, weather_data, ship)
-                            st.markdown(route_summary)
-                            
-                            # Danger assessment
-                            danger_score = (weather_data.wind_speed / 15) * 100  # Example calculation
-                            danger_score = min(100, max(0, danger_score))  # Clamp between 0-100
-                            
-                            # Create gauge for danger score
-                            fig = go.Figure(go.Indicator(
-                                mode = "gauge+number",
-                                value = danger_score,
-                                domain = {'x': [0, 1], 'y': [0, 1]},
-                                title = {'text': "Route Risk Assessment"},
-                                gauge = {
-                                    'axis': {'range': [None, 100]},
-                                    'bar': {'color': "darkblue"},
-                                    'steps' : [
-                                        {'range': [0, 33], 'color': "green"},
-                                        {'range': [33, 66], 'color': "yellow"},
-                                        {'range': [66, 100], 'color': "red"}
-                                    ],
-                                    'threshold': {
-                                        'line': {'color': "red", 'width': 4},
-                                        'thickness': 0.75,
-                                        'value': danger_score
-                                    }
-                                }
-                            ))
-                            st.plotly_chart(fig)
-                            
-                            # Additional recommendations based on conditions
-                            st.subheader("Safety Recommendations")
-                            if weather_data.wind_speed > 8:
-                                st.info("🌬️ Consider reducing speed due to high winds.")
-                            if distance > (ship.fuel_capacity / ship.fuel_consumption) * 0.8:
-                                st.info("⛽ Consider refueling options along the route.")
-                            if weather_data.visibility < 7:
-                                st.info("👁️ Maintain vigilant watch due to reduced visibility.")
-                        
-                        # Tab 4: Fuel analysis
-                        with tab4:
-                            st.header("Fuel Consumption Analysis")
-                            
-                            # Range assessment
-                            max_range = ship.fuel_capacity / ship.fuel_consumption
-                            range_percentage = (distance / max_range) * 100
-                            
-                            col1, col2 = st.columns(2)
-                            col1.metric("Estimated Fuel Consumption", f"{fuel_consumption_estimate:.1f} liters/tons")
-                            col2.metric("Remaining Fuel After Journey", f"{remaining_fuel:.1f} liters/tons")
-                            
-                            st.markdown(f"**Maximum Range:** {max_range:.1f} nautical miles")
-                            st.markdown(f"**Journey uses:** {range_percentage:.1f}% of maximum range")
-                            
-                            # Progress bar for fuel usage
-                            st.progress(min(1.0, fuel_consumption_estimate / ship.fuel_capacity))
-                            
-                            # Consumption chart
-                            st.plotly_chart(create_fuel_consumption_chart(distance, ship))
-                            
-                            # Recommendations
-                            if range_percentage > 80:
-                                st.warning("⚠️ This journey uses more than 80% of your vessel's range. Consider refueling options.")
-                            elif range_percentage > 60:
-                                st.info("ℹ️ Consider maintaining a fuel reserve by reducing speed.")
-                            else:
-                                st.success("✅ Your vessel has sufficient fuel capacity for this journey.")
-
-                        # ── Tab 5: ML Hazard Prediction ──────────────────────
-                        with tab5:
-                            st.header("🤖 ML Hazard & Delay Prediction")
-                            st.markdown("""
-                            A **Random Forest** model trained on weather features predicts
-                            the route's hazard level and potential voyage delay.
-                            """)
-                            with st.spinner("Running ML model..."):
-                                predictor = HazardPredictor()
-                                pred = predictor.predict(weather_data)
-
-                            hazard   = pred["hazard_label"]
-                            conf     = pred["confidences"]
-                            delay    = pred["delay_hours"]
-                            feat_imp = pred["feature_importance"]
-
-                            # Hazard badge
-                            badge_color = {"Low": "🟢", "Medium": "🟡", "High": "🔴"}
-                            st.subheader(f"{badge_color[hazard]} Hazard Level: **{hazard}**")
-
-                            # Confidence breakdown
-                            c1, c2, c3 = st.columns(3)
-                            c1.metric("Low Risk",    f"{conf['Low']:.1f}%")
-                            c2.metric("Medium Risk", f"{conf['Medium']:.1f}%")
-                            c3.metric("High Risk",   f"{conf['High']:.1f}%")
-
-                            st.info(f"⏱️ **Estimated Voyage Delay:** {delay:.1f} hours")
-
-                            # Feature importance chart
-                            st.subheader("📊 Feature Importance")
-                            fi_df = pd.DataFrame(
-                                list(feat_imp.items()),
-                                columns=["Feature", "Importance"]
-                            ).sort_values("Importance", ascending=True)
-                            fig_fi = px.bar(
-                                fi_df, x="Importance", y="Feature",
-                                orientation="h",
-                                title="Which weather factors drive the prediction?",
-                                color="Importance",
-                                color_continuous_scale="RdYlGn_r"
-                            )
-                            st.plotly_chart(fig_fi, use_container_width=True)
-
-                            # Advisory
-                            if pred["hazard_idx"] == 2:
-                                st.error("🚨 HIGH HAZARD: Consider delaying departure or altering course.")
-                            elif pred["hazard_idx"] == 1:
-                                st.warning("⚠️ MEDIUM HAZARD: Proceed with caution and monitor conditions.")
-                            else:
-                                st.success("✅ LOW HAZARD: Conditions are favourable for this voyage.")
-
-                        # ── Tab 6: Multi-Stop Voyage ─────────────────────────
-                        with tab6:
-                            st.header("🚢 Multi-Stop Voyage Optimizer")
-                            st.markdown("""
-                            Plan a **port-chaining** voyage. Enter all ports (one per line).
-                            The optimizer will reorder intermediate stops for minimal total distance.
-                            """)
-
-                            default_ports = f"{start_location}\n{end_location}"
-                            ports_input = st.text_area(
-                                "Ports (one per line — first = origin, last = destination):",
-                                value=default_ports, height=150
-                            )
-                            multi_btn = st.button("⚙️ Optimize Multi-Stop Route", key="multi_stop_btn")
-
-                            if multi_btn:
-                                port_list = [p.strip() for p in ports_input.splitlines() if p.strip()]
-                                if len(port_list) < 2:
-                                    st.error("Please enter at least 2 ports.")
-                                else:
-                                    with st.spinner("Geocoding ports and optimizing route..."):
-                                        ms_optimizer = MultiStopOptimizer(analyzer)
-                                        result = ms_optimizer.optimize(port_list, ship)
-
-                                    if "error" in result:
-                                        st.error(result["error"])
-                                    else:
-                                        # Summary metrics
-                                        m1, m2, m3 = st.columns(3)
-                                        m1.metric("Total Distance",  f"{result['total_distance']} nm")
-                                        m2.metric("Total ETA",       f"{result['total_eta']} hrs")
-                                        m3.metric("Total Fuel Est.", f"{result['total_fuel']} L/T")
-
-                                        # Optimized port order
-                                        st.subheader("📍 Optimized Port Order")
-                                        st.write(" → ".join(result["ordered_ports"]))
-
-                                        # Per-leg table
-                                        st.subheader("📋 Leg-by-Leg Breakdown")
-                                        legs_df = pd.DataFrame(result["legs"])
-                                        st.dataframe(legs_df, use_container_width=True)
-
-                                        # Map
-                                        st.subheader("🗺️ Multi-Stop Route Map")
-                                        ms_map = ms_optimizer.build_map(result)
-                                        folium_static(ms_map)
-
-                                        # Fuel warning
-                                        if result["total_fuel"] > ship.fuel_capacity:
-                                            st.error("⛽ Total fuel required exceeds vessel capacity! Plan refuelling stops.")
-                                        else:
-                                            rem = ship.fuel_capacity - result["total_fuel"]
-                                            st.success(f"✅ Fuel OK — {rem:.1f} L/T remaining after voyage.")
-
+                        st.session_state.optimized_route = optimized_route
+                        st.session_state.distance = analyzer.haversine_distance(start_coords, end_coords) * 0.539957
+                        st.session_state.eta_hours = analyzer.calculate_eta(start_coords, end_coords, ship)
+                        st.session_state.fuel_consumption_estimate = analyzer.calculate_fuel_consumption(st.session_state.distance, ship)
+                        st.session_state.remaining_fuel = ship.fuel_capacity - st.session_state.fuel_consumption_estimate
             except Exception as e:
-                st.error(f"An error occurred: {str(e)}")
-                logging.error(f"Error in Streamlit app: {e}")
+                st.error(f"Optimization error: {e}")
+                st.session_state.optimized = False
+
+    # Display results based on session state
+    if st.session_state.optimized:
+        # Create tabs
+        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+            "🗺️ Route Map", "🌤️ Weather Data",
+            "📋 Route Analysis", "⛽ Fuel Analysis",
+            "🤖 ML Hazard Prediction", "🚢 Multi-Stop Voyage"
+        ])
+        
+        weather_data = st.session_state.weather_data
+        distance = st.session_state.distance
+        eta_hours = st.session_state.eta_hours
+        fuel_consumption_estimate = st.session_state.fuel_consumption_estimate
+        remaining_fuel = st.session_state.remaining_fuel
+        optimized_route = st.session_state.optimized_route
+        start_coords = st.session_state.start_coords
+        end_coords = st.session_state.end_coords
+
+        # Tab 1: Map
+        with tab1:
+            st.header("Maritime Route Map")
+            m = analyzer.create_map(start_coords, end_coords)
+            folium_static(m)
+            
+            # Summary stats
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Distance", f"{distance:.1f} nautical miles")
+            col2.metric("ETA", f"{eta_hours:.1f} hours")
+            col3.metric("Fuel Used", f"{fuel_consumption_estimate:.1f} liters/tons")
+        
+        # Tab 2: Weather data
+        with tab2:
+            st.header(f"Weather Conditions at {weather_data.location}")
+            
+            # Display weather data in columns
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Temperature", f"{weather_data.temperature:.1f}°C")
+            col2.metric("Wind Speed", f"{weather_data.wind_speed:.1f} m/s")
+            col3.metric("Visibility", f"{weather_data.visibility:.1f} km")
+            
+            col1, col2 = st.columns(2)
+            col1.metric("Humidity", f"{weather_data.humidity}%")
+            col2.metric("Pressure", f"{weather_data.pressure} hPa")
+            
+            st.markdown(f"**Weather description:** {weather_data.description}")
+            st.markdown(f"**Last updated:** {weather_data.timestamp}")
+            
+            # Weather radar chart
+            st.plotly_chart(create_weather_radar_chart(weather_data))
+            
+            # Weather warning
+            if weather_data.wind_speed > 10:
+                st.warning("⚠️ High wind speeds detected! Exercise caution.")
+            if weather_data.visibility < 5:
+                st.warning("⚠️ Low visibility conditions! Exercise caution.")
+        
+        # Tab 3: Route analysis
+        with tab3:
+            st.header("Route Analysis and Recommendations")
+            route_summary = analyzer.generate_route_summary(optimized_route, weather_data, ship)
+            st.markdown(route_summary)
+            
+            # Danger assessment
+            danger_score = (weather_data.wind_speed / 15) * 100  # Example calculation
+            danger_score = min(100, max(0, danger_score))  # Clamp between 0-100
+            
+            # Create gauge for danger score
+            fig = go.Figure(go.Indicator(
+                mode = "gauge+number",
+                value = danger_score,
+                domain = {'x': [0, 1], 'y': [0, 1]},
+                title = {'text': "Route Risk Assessment"},
+                gauge = {
+                    'axis': {'range': [None, 100]},
+                    'bar': {'color': "darkblue"},
+                    'steps' : [
+                        {'range': [0, 33], 'color': "green"},
+                        {'range': [33, 66], 'color': "yellow"},
+                        {'range': [66, 100], 'color': "red"}
+                    ],
+                    'threshold': {
+                        'line': {'color': "red", 'width': 4},
+                        'thickness': 0.75,
+                        'value': danger_score
+                    }
+                }
+            ))
+            st.plotly_chart(fig)
+            
+            # Additional recommendations based on conditions
+            st.subheader("Safety Recommendations")
+            if weather_data.wind_speed > 8:
+                st.info("🌬️ Consider reducing speed due to high winds.")
+            if distance > (ship.fuel_capacity / ship.fuel_consumption) * 0.8:
+                st.info("⛽ Consider refueling options along the route.")
+            if weather_data.visibility < 7:
+                st.info("👁️ Maintain vigilant watch due to reduced visibility.")
+        
+        # Tab 4: Fuel analysis
+        with tab4:
+            st.header("Fuel Consumption Analysis")
+            
+            # Range assessment
+            max_range = ship.fuel_capacity / ship.fuel_consumption
+            range_percentage = (distance / max_range) * 100
+            
+            col1, col2 = st.columns(2)
+            col1.metric("Estimated Fuel Consumption", f"{fuel_consumption_estimate:.1f} liters/tons")
+            col2.metric("Remaining Fuel After Journey", f"{remaining_fuel:.1f} liters/tons")
+            
+            st.markdown(f"**Maximum Range:** {max_range:.1f} nautical miles")
+            st.markdown(f"**Journey uses:** {range_percentage:.1f}% of maximum range")
+            
+            # Progress bar for fuel usage
+            st.progress(min(1.0, fuel_consumption_estimate / ship.fuel_capacity))
+            
+            # Consumption chart
+            st.plotly_chart(create_fuel_consumption_chart(distance, ship))
+            
+            # Recommendations
+            if range_percentage > 80:
+                st.warning("⚠️ This journey uses more than 80% of your vessel's range. Consider refueling options.")
+            elif range_percentage > 60:
+                st.info("ℹ️ Consider maintaining a fuel reserve by reducing speed.")
+            else:
+                st.success("✅ Your vessel has sufficient fuel capacity for this journey.")
+
+        # ── Tab 5: ML Hazard Prediction ──────────────────────
+        with tab5:
+            st.header("🤖 ML Hazard & Delay Prediction")
+            st.markdown("""
+            A **Random Forest** model trained on weather features predicts
+            the route's hazard level and potential voyage delay.
+            """)
+            with st.spinner("Running ML model..."):
+                predictor = HazardPredictor()
+                pred = predictor.predict(weather_data)
+
+            hazard   = pred["hazard_label"]
+            conf     = pred["confidences"]
+            delay    = pred["delay_hours"]
+            feat_imp = pred["feature_importance"]
+
+            # Hazard badge
+            badge_color = {"Low": "🟢", "Medium": "🟡", "High": "🔴"}
+            st.subheader(f"{badge_color[hazard]} Hazard Level: **{hazard}**")
+
+            # Confidence breakdown
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Low Risk",    f"{conf['Low']:.1f}%")
+            c2.metric("Medium Risk", f"{conf['Medium']:.1f}%")
+            c3.metric("High Risk",   f"{conf['High']:.1f}%")
+
+            st.info(f"⏱️ **Estimated Voyage Delay:** {delay:.1f} hours")
+
+            # Feature importance chart
+            st.subheader("📊 Feature Importance")
+            fi_df = pd.DataFrame(
+                list(feat_imp.items()),
+                columns=["Feature", "Importance"]
+            ).sort_values("Importance", ascending=True)
+            fig_fi = px.bar(
+                fi_df, x="Importance", y="Feature",
+                orientation="h",
+                title="Which weather factors drive the prediction?",
+                color="Importance",
+                color_continuous_scale="RdYlGn_r"
+            )
+            st.plotly_chart(fig_fi, use_container_width=True)
+
+            # Advisory
+            if pred["hazard_idx"] == 2:
+                st.error("🚨 HIGH HAZARD: Consider delaying departure or altering course.")
+            elif pred["hazard_idx"] == 1:
+                st.warning("⚠️ MEDIUM HAZARD: Proceed with caution and monitor conditions.")
+            else:
+                st.success("✅ LOW HAZARD: Conditions are favourable for this voyage.")
+
+
+        # ── Tab 6: Multi-Stop Voyage ─────────────────────────
+        with tab6:
+            st.header("🚢 Multi-Stop Voyage Optimizer")
+            st.markdown("""
+            Plan a **port-chaining** voyage. Enter all ports (one per line).
+            The optimizer will reorder intermediate stops for minimal total distance.
+            """)
+
+            ports_input = st.text_area(
+                "Ports (one per line — first = origin, last = destination):",
+                value=f"{start_location}\n{end_location}", height=150,
+                key="ms_input"
+            )
+            multi_btn = st.button("⚙️ Optimize Multi-Stop Route", key="ms_btn")
+
+            if multi_btn:
+                port_list = [p.strip() for p in ports_input.splitlines() if p.strip()]
+                if len(port_list) < 2:
+                    st.error("Please enter at least 2 ports.")
+                    st.session_state.multi_optimized = False
+                else:
+                    with st.spinner("Geocoding ports and optimizing route..."):
+                        ms_optimizer = MultiStopOptimizer(analyzer)
+                        st.session_state.ms_result = ms_optimizer.optimize(port_list, ship)
+                        st.session_state.multi_optimized = True
+
+            if st.session_state.get('multi_optimized'):
+                result = st.session_state.ms_result
+                if "error" in result:
+                    st.error(result["error"])
+                else:
+                    # Summary metrics
+                    m1, m2, m3 = st.columns(3)
+                    m1.metric("Total Distance",  f"{result['total_distance']} nm")
+                    m2.metric("Total ETA",       f"{result['total_eta']} hrs")
+                    m3.metric("Total Fuel Est.", f"{result['total_fuel']} L/T")
+
+                    # Optimized port order
+                    st.subheader("📍 Optimized Port Order")
+                    st.write(" → ".join(result["ordered_ports"]))
+
+                    # Per-leg table
+                    st.subheader("📋 Leg-by-Leg Breakdown")
+                    legs_df = pd.DataFrame(result["legs"])
+                    st.dataframe(legs_df, use_container_width=True)
+
+                    # Map
+                    st.subheader("🗺️ Multi-Stop Route Map")
+                    ms_map = MultiStopOptimizer(analyzer).build_map(result)
+                    folium_static(ms_map)
+
+                    # Fuel warning
+                    if result["total_fuel"] > ship.fuel_capacity:
+                        st.error("⛽ Total fuel required exceeds vessel capacity! Plan refuelling stops.")
+                    else:
+                        rem = ship.fuel_capacity - result["total_fuel"]
+                        st.success(f"✅ Fuel OK — {rem:.1f} L/T remaining after voyage.")
+
+
     else:
         # Display welcome information when the app first loads
         st.subheader("Welcome to the Marine Route Optimizer!")
