@@ -66,9 +66,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Replace these with your actual API keys via st.secrets
-WEATHER_API_KEY = st.secrets.get("WEATHER_API_KEY", "YOUR_WEATHER_API_KEY")
-GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", "YOUR_GROQ_API_KEY")
+# Load API keys securely. Fallback to placeholder if secrets.toml is missing.
+try:
+    WEATHER_API_KEY = st.secrets["WEATHER_API_KEY"]
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except (KeyError, FileNotFoundError, Exception):
+    WEATHER_API_KEY = "YOUR_WEATHER_API_KEY_HERE"
+    GROQ_API_KEY = "YOUR_GROQ_API_KEY_HERE"
 
 # Configure logging
 logging.basicConfig(filename='marine_optimization.log', level=logging.INFO,
