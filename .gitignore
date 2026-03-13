@@ -1,0 +1,13 @@
+.env
+*.log
+__pycache__/
+.streamlit/
+.vscode/
+node_modules/
+dist/
+build/
+venv/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

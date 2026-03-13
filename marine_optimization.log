@@ -1,0 +1,130 @@
+2026-03-06 11:26:07,655 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 11:26:08,481 - INFO - Successfully geocoded location: chennai
+2026-03-06 11:26:08,481 - INFO - Attempting to geocode location: singapore (attempt 1)
+2026-03-06 11:26:09,403 - INFO - Successfully geocoded location: singapore
+2026-03-06 11:26:10,313 - INFO - Successfully fetched weather data for Park Town
+2026-03-06 11:26:10,317 - INFO - ACO converged after 3 iterations
+2026-03-06 11:26:54,179 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 11:26:54,651 - INFO - Successfully geocoded location: chennai
+2026-03-06 11:26:54,652 - INFO - Attempting to geocode location: singapore (attempt 1)
+2026-03-06 11:26:54,754 - INFO - Successfully geocoded location: singapore
+2026-03-06 11:26:55,473 - INFO - Successfully fetched weather data for Park Town
+2026-03-06 11:26:55,477 - INFO - ACO converged after 4 iterations
+2026-03-06 12:51:59,351 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-06 12:52:01,675 - INFO - Successfully geocoded location: san francisco
+2026-03-06 12:52:01,675 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-06 12:52:03,209 - INFO - Successfully geocoded location: los angeles
+2026-03-06 12:52:05,872 - INFO - Successfully fetched weather data for San Francisco
+2026-03-06 12:52:05,893 - INFO - ACO converged after 10 iterations
+2026-03-06 12:52:53,763 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-06 12:52:54,309 - INFO - Successfully geocoded location: san francisco
+2026-03-06 12:52:54,309 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-06 12:52:54,414 - INFO - Successfully geocoded location: los angeles
+2026-03-06 12:52:55,449 - INFO - Successfully fetched weather data for San Francisco
+2026-03-06 12:52:55,457 - INFO - ACO converged after 4 iterations
+2026-03-06 12:53:46,264 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-06 12:53:46,638 - INFO - Successfully geocoded location: san francisco
+2026-03-06 12:53:46,639 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-06 12:53:46,736 - INFO - Successfully geocoded location: los angeles
+2026-03-06 12:53:47,967 - INFO - Successfully fetched weather data for San Francisco
+2026-03-06 12:53:47,981 - INFO - ACO converged after 9 iterations
+2026-03-06 12:54:48,097 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 12:54:49,102 - INFO - Successfully geocoded location: chennai
+2026-03-06 12:54:49,102 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-06 12:54:49,194 - INFO - Successfully geocoded location: los angeles
+2026-03-06 12:54:49,574 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 12:54:49,911 - INFO - Successfully geocoded location: chennai
+2026-03-06 12:54:49,911 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-06 12:54:50,013 - INFO - Successfully geocoded location: los angeles
+2026-03-06 12:54:51,037 - INFO - Successfully fetched weather data for Park Town
+2026-03-06 12:54:51,043 - INFO - ACO converged after 3 iterations
+2026-03-06 12:58:20,838 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 12:58:21,267 - INFO - Successfully geocoded location: chennai
+2026-03-06 12:58:21,267 - INFO - Attempting to geocode location: australia (attempt 1)
+2026-03-06 12:58:21,983 - INFO - Successfully geocoded location: australia
+2026-03-06 12:58:23,007 - INFO - Successfully fetched weather data for Park Town
+2026-03-06 12:58:23,018 - INFO - ACO converged after 10 iterations
+2026-03-06 13:07:55,659 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 13:07:56,182 - INFO - Successfully geocoded location: chennai
+2026-03-06 13:07:56,182 - INFO - Attempting to geocode location: australia (attempt 1)
+2026-03-06 13:07:56,571 - INFO - Successfully geocoded location: australia
+2026-03-06 13:07:57,454 - INFO - Successfully fetched weather data for Park Town
+2026-03-06 13:07:57,466 - INFO - ACO converged after 3 iterations
+2026-03-06 13:08:53,925 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-06 13:08:54,249 - INFO - Successfully geocoded location: chennai
+2026-03-06 13:08:54,250 - INFO - Attempting to geocode location: australia (attempt 1)
+2026-03-06 13:08:54,340 - INFO - Successfully geocoded location: australia
+2026-03-06 13:08:55,078 - INFO - Successfully fetched weather data for Park Town
+2026-03-06 13:08:55,088 - INFO - ACO converged after 4 iterations
+2026-03-09 09:17:57,328 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-09 09:17:58,350 - INFO - Successfully geocoded location: san francisco
+2026-03-09 09:17:58,350 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-09 09:17:59,084 - INFO - Successfully geocoded location: los angeles
+2026-03-09 09:17:59,735 - INFO - Successfully fetched weather data for San Francisco
+2026-03-09 09:17:59,744 - INFO - ACO converged after 4 iterations
+2026-03-09 14:12:49,177 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-09 14:12:50,413 - INFO - Successfully geocoded location: san francisco
+2026-03-09 14:12:50,413 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-09 14:12:50,735 - INFO - Successfully geocoded location: los angeles
+2026-03-09 14:12:51,605 - INFO - Successfully fetched weather data for San Francisco
+2026-03-09 14:12:51,617 - INFO - ACO converged after 4 iterations
+2026-03-09 14:16:27,244 - INFO - Attempting to geocode location: india (attempt 1)
+2026-03-09 14:16:27,971 - INFO - Successfully geocoded location: india
+2026-03-09 14:16:27,972 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-09 14:16:27,980 - INFO - Successfully geocoded location: los angeles
+2026-03-09 14:16:28,948 - INFO - Successfully fetched weather data for J\u0101mai
+2026-03-09 14:16:28,962 - INFO - ACO converged after 6 iterations
+2026-03-09 14:17:09,808 - INFO - Attempting to geocode location: india (attempt 1)
+2026-03-09 14:17:09,871 - INFO - Successfully geocoded location: india
+2026-03-09 14:17:09,872 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-09 14:17:09,880 - INFO - Successfully geocoded location: los angeles
+2026-03-09 14:17:13,323 - INFO - Successfully fetched weather data for J\u0101mai
+2026-03-09 14:17:13,353 - INFO - ACO converged after 6 iterations
+2026-03-10 09:38:57,044 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-10 09:38:57,887 - INFO - Successfully geocoded location: chennai
+2026-03-10 09:38:57,887 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-10 09:38:58,401 - INFO - Successfully geocoded location: san francisco
+2026-03-10 09:38:59,019 - INFO - Successfully fetched weather data for Park Town
+2026-03-10 09:38:59,025 - INFO - ACO converged after 2 iterations
+2026-03-10 09:49:17,505 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-10 09:49:17,579 - INFO - Successfully geocoded location: chennai
+2026-03-10 09:49:17,579 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 09:49:18,520 - INFO - Successfully geocoded location: los angeles
+2026-03-10 09:49:18,997 - INFO - Successfully fetched weather data for Park Town
+2026-03-10 09:49:19,003 - INFO - ACO converged after 4 iterations
+2026-03-10 09:51:02,227 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-10 09:51:02,276 - INFO - Successfully geocoded location: chennai
+2026-03-10 09:51:02,276 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 09:51:02,282 - INFO - Successfully geocoded location: los angeles
+2026-03-10 09:51:02,741 - INFO - Successfully fetched weather data for Park Town
+2026-03-10 09:51:02,747 - INFO - ACO converged after 5 iterations
+2026-03-10 09:52:50,665 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-10 09:52:50,695 - INFO - Successfully geocoded location: chennai
+2026-03-10 09:52:50,695 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 09:52:50,700 - INFO - Successfully geocoded location: los angeles
+2026-03-10 09:52:51,192 - INFO - Successfully fetched weather data for Park Town
+2026-03-10 09:52:51,198 - INFO - ACO converged after 3 iterations
+2026-03-10 10:02:07,524 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-10 10:02:07,620 - INFO - Successfully geocoded location: san francisco
+2026-03-10 10:02:07,621 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 10:02:07,626 - INFO - Successfully geocoded location: los angeles
+2026-03-10 10:02:08,135 - INFO - Successfully fetched weather data for San Francisco
+2026-03-10 10:02:08,140 - INFO - ACO converged after 4 iterations
+2026-03-10 10:03:43,200 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-10 10:03:43,271 - INFO - Successfully geocoded location: san francisco
+2026-03-10 10:03:43,271 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 10:03:43,337 - INFO - Successfully geocoded location: los angeles
+2026-03-10 10:03:43,862 - INFO - Successfully fetched weather data for San Francisco
+2026-03-10 10:03:43,867 - INFO - ACO converged after 4 iterations
+2026-03-10 10:29:56,428 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-10 10:29:56,616 - INFO - Successfully geocoded location: san francisco
+2026-03-10 10:29:56,617 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 10:29:56,632 - INFO - Successfully geocoded location: los angeles
+2026-03-10 10:29:57,237 - INFO - Successfully fetched weather data for San Francisco
+2026-03-10 10:29:57,261 - INFO - ACO converged after 3 iterations
+2026-03-10 11:41:23,149 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-10 11:41:23,269 - INFO - Successfully geocoded location: chennai
+2026-03-10 11:41:23,269 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-10 11:41:24,032 - INFO - Successfully geocoded location: los angeles
+2026-03-10 11:41:24,782 - INFO - Successfully fetched weather data for Park Town
+2026-03-10 11:41:24,797 - INFO - ACO converged after 5 iterations

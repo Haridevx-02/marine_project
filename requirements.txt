@@ -1,0 +1,11 @@
+streamlit
+requests
+geopy
+numpy
+groq
+folium
+streamlit-folium
+plotly
+pandas
+scikit-learn
+searoute
