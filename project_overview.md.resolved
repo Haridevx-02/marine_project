@@ -1,0 +1,49 @@
+# Marine Route Optimizer: Project Overview
+
+This project is a sophisticated Maritime Decision Support System (MDSS) designed to help ship captains and logistics managers plan safer, more fuel-efficient voyages.
+
+## 🛠️ Technology Stack & Libraries
+
+The application is built using **Python** and leverages several specialized libraries to handle geospatial data, machine learning, and interactive visualization.
+
+### Core Libraries
+- **[Streamlit](https://streamlit.io/)**: The framework used to build the web interface. It allows for fast, reactive UI development using only Python.
+- **[Searoute](https://github.com/eurostat/searoute)**: This is the most critical library for maritime logic. Unlike general maps (which show road routes), `searoute` uses a database of real global maritime sea lanes to calculate the actual path a ship would take.
+- **[Folium](https://python-visualization.github.io/folium/)**: Used for rendering interactive maps. We use it to draw the optimized sea paths, mark ports, and show hazard zones.
+- **[Geopy](https://geopy.readthedocs.io/)**: Handles "Geocoding" — converting a port name (like "Singapore") into exact Latitude and Longitude coordinates.
+
+### Data & Analysis
+- **[Pandas](https://pandas.pydata.org/) & [NumPy](https://numpy.org/)**: The "engine room" for data handling. They process route coordinates, calculate distances, and manage the Multi-Stop leg-by-leg breakdown.
+- **[Scikit-Learn](https://scikit-learn.org/)**: Powers the **Hazard Predictor**. It uses a `RandomForest` machine learning model to classify route safety (Low/Medium/High risk) based on weather features like wind speed and visibility.
+- **[Plotly](https://plotly.com/python/)**: Creates the premium charts and gauges (like the Fuel Analysis progress and Weather Radar).
+
+### External APIs
+- **OpenWeather API**: Provides real-time maritime weather data (wind, pressure, visibility).
+- **Groq API (AI)**: Acts as an automated maritime consultant, analyzing the route and weather to give a natural-language safety summary.
+
+---
+
+## 🏗️ How it Works (Logic Flow)
+
+### 1. The Planning Phase
+When you enter "New York" and "London", the system first uses **Geopy** to find their coordinates. It then checks if you have multiple stops. If you do, the **Multi-Stop Optimizer** calculates the most efficient sequence to visit those ports.
+
+### 2. Maritime Routing
+The coordinates are passed to the **Searoute** engine. It finds the nearest "maritime nodes" and connects them through authorized international sea lanes, avoiding landmasses and following standard shipping routes.
+
+### 3. Safety & ML Assessment
+Once the route is defined:
+1. It fetches **OpenWeather** data for the locations.
+2. The **ML Hazard Predictor** runs the weather variables through a pre-trained model to estimate potential delays and hazard levels.
+3. The **Fuel Analyzer** calculates total consumption based on the vessel's speed and weight.
+
+### 4. Visualization & AI Summary
+Finally, the UI renders:
+- **Map View**: Showing the actual sea path.
+- **Metrics**: Distance, ETA, and Fuel remaining.
+- **AI Consultation**: A detailed report on safety and recommendations.
+
+---
+
+## ✨ Design Philosophy
+The UI uses **Glassmorphism** (frosted glass effects) and a **Marine Dark Theme**. This isn't just for looks; it's designed to reduce eye strain (important for long-watch shifts) and highlight critical safety warnings (red/yellow badges) clearly against the deep blue background.
