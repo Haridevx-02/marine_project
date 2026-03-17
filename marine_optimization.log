@@ -175,3 +175,116 @@
 2026-03-13 14:06:14,621 - INFO - Successfully geocoded location: japan
 2026-03-13 14:06:14,621 - INFO - Attempting to geocode location: los angeles (attempt 1)
 2026-03-13 14:06:14,633 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:51:00,888 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:51:01,159 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:51:01,160 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:51:01,196 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:51:02,770 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:51:02,792 - INFO - ACO converged after 5 iterations
+2026-03-13 14:51:31,149 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:51:31,467 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:51:31,468 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:51:31,570 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:51:32,483 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:51:32,496 - INFO - ACO converged after 6 iterations
+2026-03-13 14:52:56,732 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:52:57,813 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:52:57,814 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:52:58,273 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:52:59,386 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:52:59,405 - INFO - ACO converged after 4 iterations
+2026-03-13 14:53:38,480 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:53:38,552 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:53:38,553 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:53:38,570 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:53:39,427 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:53:39,441 - INFO - ACO converged after 4 iterations
+2026-03-13 14:53:46,463 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:53:46,584 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:53:46,584 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:53:46,594 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:53:48,175 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:53:48,378 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:53:48,419 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:53:48,419 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:53:48,477 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:53:48,637 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:53:48,657 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:53:48,678 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:53:48,678 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:53:48,680 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:53:48,680 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:53:48,688 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:53:48,689 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:53:49,665 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:53:49,683 - INFO - ACO converged after 5 iterations
+2026-03-13 14:54:07,958 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:54:08,043 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:54:08,044 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:54:08,052 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:54:08,702 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:54:08,714 - INFO - ACO converged after 6 iterations
+2026-03-13 14:54:30,624 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:54:30,833 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:54:30,833 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:54:30,868 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:54:31,785 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:54:31,880 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:54:31,880 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:54:31,908 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:54:32,125 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-13 14:54:32,238 - INFO - Successfully geocoded location: san francisco
+2026-03-13 14:54:32,238 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-13 14:54:32,245 - INFO - Successfully geocoded location: los angeles
+2026-03-13 14:54:32,835 - INFO - Successfully fetched weather data for San Francisco
+2026-03-13 14:54:32,842 - INFO - ACO converged after 3 iterations
+2026-03-17 09:25:36,175 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:25:38,329 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:25:38,329 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:25:39,113 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:25:40,201 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:25:40,250 - INFO - ACO converged after 3 iterations
+2026-03-17 09:26:32,768 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:26:32,861 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:26:32,864 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:26:32,892 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:26:34,324 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:26:34,490 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:26:34,599 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:26:34,599 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:26:34,633 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:26:35,530 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:26:35,538 - INFO - ACO converged after 5 iterations
+2026-03-17 09:27:59,143 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:27:59,275 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:27:59,275 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:27:59,283 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:28:00,311 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:28:00,335 - INFO - ACO converged after 4 iterations
+2026-03-17 09:28:24,741 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:28:25,055 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:28:25,055 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:28:25,066 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:28:26,486 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:28:26,685 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:28:26,723 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:28:26,736 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:28:26,736 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:28:26,745 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:28:26,906 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:28:26,907 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:28:26,954 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:28:27,641 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:28:27,660 - INFO - ACO converged after 9 iterations
+2026-03-17 09:29:15,559 - INFO - Attempting to geocode location: san francisco (attempt 1)
+2026-03-17 09:29:15,636 - INFO - Successfully geocoded location: san francisco
+2026-03-17 09:29:15,637 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-03-17 09:29:15,666 - INFO - Successfully geocoded location: los angeles
+2026-03-17 09:29:16,609 - INFO - Successfully fetched weather data for San Francisco
+2026-03-17 09:29:16,622 - INFO - ACO converged after 3 iterations
+2026-03-17 09:37:27,351 - INFO - Attempting to geocode location: chennai (attempt 1)
+2026-03-17 09:37:28,062 - INFO - Successfully geocoded location: chennai
+2026-03-17 09:37:28,063 - INFO - Attempting to geocode location: rameshwaram (attempt 1)
+2026-03-17 09:37:28,578 - INFO - Successfully geocoded location: rameshwaram
+2026-03-17 09:37:29,603 - INFO - Successfully fetched weather data for Park Town
+2026-03-17 09:37:29,632 - INFO - ACO converged after 5 iterations
