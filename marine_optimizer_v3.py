@@ -419,15 +419,14 @@ class MarineWeatherAnalyzer:
             for i in range(len(route) - 1):
                 pheromones[route[i]][route[i + 1]] += deposit
 
-    def generate_route_summary(self, route, weather_data: WeatherData, ship: Ship) -> str:
+    def generate_route_summary(self, start_loc: str, end_loc: str, distance: float, weather_data: WeatherData, ship: Ship) -> str:
         """Generate a concise route summary with key details"""
         try:
-            optimized_distance = len(route) - 1  # Assuming distance is based on route length
             summary = f"""
             ## Optimized Route Summary
-            - Start: {route[0]}
-            - End: {route[-1]}
-            - Total Distance: {optimized_distance} nautical miles
+            - Start: {start_loc}
+            - End: {end_loc}
+            - Total Distance: {distance:.1f} nautical miles
             
             ## Vessel Details
             - Ship Type: {ship.ship_type}
@@ -884,6 +883,8 @@ def main():
                             num_ants=num_ants, max_iterations=max_iterations
                         )
                         st.session_state.optimized_route = optimized_route
+                        st.session_state.start_location_name = start_location
+                        st.session_state.end_location_name = end_location
                         
                         sea_route = get_sea_route_coords(start_coords, end_coords)
                         st.session_state.sea_route_coords = sea_route
@@ -942,7 +943,10 @@ def main():
         # Tab 3: Route analysis
         with tab3:
             st.header("Route Analysis and Recommendations")
-            route_summary = analyzer.generate_route_summary(st.session_state.optimized_route, weather_data, ship)
+            start_name = st.session_state.get('start_location_name', 'Origin')
+            end_name = st.session_state.get('end_location_name', 'Destination')
+            distance_nm = st.session_state.get('distance', 0.0)
+            route_summary = analyzer.generate_route_summary(start_name, end_name, distance_nm, weather_data, ship)
             st.markdown(route_summary)
             
             danger_score = min(100, max(0, (weather_data.wind_speed / 15) * 100))
