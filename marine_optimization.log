@@ -457,3 +457,23 @@
 2026-04-07 13:21:44,817 - INFO - Successfully geocoded location: mumbai
 2026-04-07 13:21:44,817 - INFO - Attempting to geocode location: trivandrum (attempt 1)
 2026-04-07 13:21:45,830 - INFO - Successfully geocoded location: trivandrum
+2026-04-16 19:51:08,540 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-04-16 19:51:09,452 - INFO - Successfully geocoded location: chennai port
+2026-04-16 19:51:09,453 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-04-16 19:51:10,427 - INFO - Successfully geocoded location: durban
+2026-04-16 19:51:11,003 - INFO - Successfully fetched weather data for Chennai
+2026-04-16 19:51:11,014 - INFO - ACO converged after 2 iterations
+2026-04-16 19:56:18,610 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-04-16 19:56:18,774 - INFO - Successfully geocoded location: chennai port
+2026-04-16 19:56:18,774 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-04-16 19:56:18,809 - INFO - Successfully geocoded location: durban
+2026-04-16 19:56:18,810 - INFO - Attempting to geocode location: tiruvandram (attempt 1)
+2026-04-16 19:56:19,360 - INFO - Attempting to geocode location: tiruvandram (attempt 2)
+2026-04-16 19:56:19,394 - INFO - Attempting to geocode location: tiruvandram (attempt 3)
+2026-04-16 19:56:19,427 - WARNING - Could not find coordinates for location: tiruvandram
+2026-04-16 19:57:00,318 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-04-16 19:57:00,430 - INFO - Successfully geocoded location: chennai port
+2026-04-16 19:57:00,430 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-04-16 19:57:00,464 - INFO - Successfully geocoded location: durban
+2026-04-16 19:57:00,465 - INFO - Attempting to geocode location: trivandrum (attempt 1)
+2026-04-16 19:57:01,235 - INFO - Successfully geocoded location: trivandrum
