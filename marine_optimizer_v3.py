@@ -35,12 +35,20 @@ def get_sea_route_coords(start_coords: Tuple[float, float],
                          end_coords: Tuple[float, float]) -> List[Tuple[float, float]]:
     """Return a list of (lat, lon) tuples following real maritime sea lanes.
     Falls back to a straight line if searoute is unavailable or fails."""
+    
+    # Check if both points are approximately in India (Latitude 6N-36N, Longitude 68E-98E)
+    in_india_start = (6.0 <= start_coords[0] <= 36.0) and (68.0 <= start_coords[1] <= 98.0)
+    in_india_end = (6.0 <= end_coords[0] <= 36.0) and (68.0 <= end_coords[1] <= 98.0)
+    is_india = in_india_start and in_india_end
+
     if _SEAROUTE_AVAILABLE:
         try:
             # searoute expects [lon, lat] order
+            # Apply append_orig_dest for internal India routes so the map line connects to the port markers
             route = sr.searoute(
                 [start_coords[1], start_coords[0]],
-                [end_coords[1],   end_coords[0]]
+                [end_coords[1],   end_coords[0]],
+                append_orig_dest=is_india
             )
             # GeoJSON coordinates are [lon, lat] — flip to (lat, lon) for folium
             coords = [(pt[1], pt[0]) for pt in route['geometry']['coordinates']]
