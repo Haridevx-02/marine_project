@@ -512,3 +512,83 @@
 2026-05-08 09:10:14,475 - INFO - Successfully geocoded location: durban
 2026-05-08 09:10:15,128 - INFO - Successfully fetched weather data for \u014cmamach\u014d-\u014dmama
 2026-05-08 09:10:15,139 - INFO - ACO converged after 3 iterations
+2026-05-12 14:02:24,046 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-12 14:02:25,092 - INFO - Successfully geocoded location: chennai port
+2026-05-12 14:02:25,093 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-05-12 14:02:25,736 - INFO - Successfully geocoded location: durban
+2026-05-12 14:02:26,916 - INFO - Successfully fetched weather data for Chennai
+2026-05-12 14:02:26,968 - INFO - ACO converged after 5 iterations
+2026-05-12 14:05:15,066 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-12 14:05:15,121 - INFO - Successfully geocoded location: chennai port
+2026-05-12 14:05:15,122 - INFO - Attempting to geocode location: atlanta (attempt 1)
+2026-05-12 14:05:15,761 - INFO - Successfully geocoded location: atlanta
+2026-05-12 14:05:15,761 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-05-12 14:05:15,768 - INFO - Successfully geocoded location: durban
+2026-05-12 14:05:26,697 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-12 14:05:26,740 - INFO - Successfully geocoded location: chennai port
+2026-05-12 14:05:26,741 - INFO - Attempting to geocode location: atlanta (attempt 1)
+2026-05-12 14:05:26,750 - INFO - Successfully geocoded location: atlanta
+2026-05-12 14:05:26,751 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-05-12 14:05:26,760 - INFO - Successfully geocoded location: durban
+2026-05-19 10:05:23,346 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:05:23,830 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:05:23,831 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-05-19 10:05:24,158 - INFO - Successfully geocoded location: los angeles
+2026-05-19 10:05:24,775 - INFO - Successfully fetched weather data for Chennai
+2026-05-19 10:05:24,781 - INFO - ACO converged after 2 iterations
+2026-05-19 10:07:16,891 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:07:16,919 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:07:16,919 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-05-19 10:07:16,928 - INFO - Successfully geocoded location: los angeles
+2026-05-19 10:07:16,928 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-05-19 10:07:17,776 - INFO - Successfully geocoded location: durban
+2026-05-19 10:08:10,554 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:08:10,588 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:08:10,589 - INFO - Attempting to geocode location: los angeles (attempt 1)
+2026-05-19 10:08:10,595 - INFO - Successfully geocoded location: los angeles
+2026-05-19 10:08:10,595 - INFO - Attempting to geocode location: durban (attempt 1)
+2026-05-19 10:08:10,601 - INFO - Successfully geocoded location: durban
+2026-05-19 10:08:10,602 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:08:10,608 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:11,998 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:09:12,030 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:12,030 - INFO - Attempting to geocode location: thoothukodi (attempt 1)
+2026-05-19 10:09:12,223 - INFO - Attempting to geocode location: thoothukodi (attempt 2)
+2026-05-19 10:09:12,230 - INFO - Attempting to geocode location: thoothukodi (attempt 3)
+2026-05-19 10:09:12,238 - WARNING - Could not find coordinates for location: thoothukodi
+2026-05-19 10:09:40,289 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:09:40,306 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:40,306 - INFO - Attempting to geocode location: thoothukodi port (attempt 1)
+2026-05-19 10:09:40,845 - INFO - Attempting to geocode location: thoothukodi port (attempt 2)
+2026-05-19 10:09:40,854 - INFO - Attempting to geocode location: thoothukodi port (attempt 3)
+2026-05-19 10:09:40,860 - WARNING - Could not find coordinates for location: thoothukodi port
+2026-05-19 10:09:44,673 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:09:44,706 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:44,706 - INFO - Attempting to geocode location: thoothukodi port (attempt 1)
+2026-05-19 10:09:44,713 - INFO - Attempting to geocode location: thoothukodi port (attempt 2)
+2026-05-19 10:09:44,720 - INFO - Attempting to geocode location: thoothukodi port (attempt 3)
+2026-05-19 10:09:44,726 - WARNING - Could not find coordinates for location: thoothukodi port
+2026-05-19 10:09:46,002 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:09:46,028 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:46,029 - INFO - Attempting to geocode location: thoothukodi port (attempt 1)
+2026-05-19 10:09:46,036 - INFO - Attempting to geocode location: thoothukodi port (attempt 2)
+2026-05-19 10:09:46,043 - INFO - Attempting to geocode location: thoothukodi port (attempt 3)
+2026-05-19 10:09:46,050 - WARNING - Could not find coordinates for location: thoothukodi port
+2026-05-19 10:09:46,501 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:09:46,529 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:46,529 - INFO - Attempting to geocode location: thoothukodi port (attempt 1)
+2026-05-19 10:09:46,539 - INFO - Attempting to geocode location: thoothukodi port (attempt 2)
+2026-05-19 10:09:46,551 - INFO - Attempting to geocode location: thoothukodi port (attempt 3)
+2026-05-19 10:09:46,569 - WARNING - Could not find coordinates for location: thoothukodi port
+2026-05-19 10:09:46,951 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:09:46,973 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:09:46,974 - INFO - Attempting to geocode location: thoothukodi port (attempt 1)
+2026-05-19 10:09:46,978 - INFO - Attempting to geocode location: thoothukodi port (attempt 2)
+2026-05-19 10:09:46,984 - INFO - Attempting to geocode location: thoothukodi port (attempt 3)
+2026-05-19 10:09:46,989 - WARNING - Could not find coordinates for location: thoothukodi port
+2026-05-19 10:10:56,106 - INFO - Attempting to geocode location: chennai port (attempt 1)
+2026-05-19 10:10:56,164 - INFO - Successfully geocoded location: chennai port
+2026-05-19 10:10:56,164 - INFO - Attempting to geocode location: chidambaranar port (attempt 1)
+2026-05-19 10:10:56,668 - INFO - Successfully geocoded location: chidambaranar port
+2026-05-19 10:10:57,554 - INFO - Successfully fetched weather data for Chennai
+2026-05-19 10:10:57,567 - INFO - ACO converged after 3 iterations
