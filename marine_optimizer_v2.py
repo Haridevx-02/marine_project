@@ -490,7 +490,7 @@ class MarineWeatherAnalyzer:
             (start_coords[0] + end_coords[0]) / 2,
             (start_coords[1] + end_coords[1]) / 2,
         )
-        m = folium.Map(location=center, zoom_start=4, tiles="CartoDB positron")
+        m = folium.Map(location=center, zoom_start=4, tiles="OpenStreetMap")
 
         # Add OpenSeaMap overlay for maritime chart detail
         folium.TileLayer(
@@ -757,7 +757,7 @@ class MultiStopOptimizer:
         ordered = result["ordered_ports"]
         coords  = result["coords"]
         center  = coords[ordered[len(ordered) // 2]]
-        m = folium.Map(location=center, zoom_start=3, tiles="CartoDB positron")
+        m = folium.Map(location=center, zoom_start=3, tiles="OpenStreetMap")
 
         # OpenSeaMap overlay
         folium.TileLayer(
@@ -1009,7 +1009,7 @@ def main():
         
         sample_start = (37.7749, -122.4194)
         sample_end   = (34.0522, -118.2437)
-        m = folium.Map(location=[35.9, -120.3], zoom_start=6, tiles="CartoDB positron")
+        m = folium.Map(location=[35.9, -120.3], zoom_start=6, tiles="OpenStreetMap")
         sample_sea_route = get_sea_route_coords(sample_start, sample_end)
         folium.PolyLine(locations=sample_sea_route, color='#0057b8', weight=3).add_to(m)
         folium.Marker(sample_start, icon=folium.Icon(color='green', icon='ship', prefix='fa')).add_to(m)
